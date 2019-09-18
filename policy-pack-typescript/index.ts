@@ -18,12 +18,12 @@ import * as assert from "assert";
 
 new PolicyPack("policy-pack-typescript", {
     policies: [{
-        name: name,
-        description: "Checks whether logging is enabled for your S3 buckets.",
+        name: "example-policy",
+        description: "An example advisory policy.",
         enforcementLevel: "advisory",
         rules: [
-            typedRule(aws.s3.Bucket.isInstance, it => {
-                assert(it.loggings && it.loggings.length > 0 === true)
+            typedRule(aws.ec2.Instance.isInstance, it => {
+                assert(!it.instanceType.includes("xlarge"));
             }),
         ],
     }],
