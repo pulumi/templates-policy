@@ -1,5 +1,5 @@
 {
-    "name": "policy-pack-typescript",
+    "name": "aws-typescript",
     "version": "0.0.1",
     "dependencies": {
         "@pulumi/aws": "^1.0.0",

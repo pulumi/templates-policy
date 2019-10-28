@@ -16,7 +16,7 @@ import * as aws from "@pulumi/aws";
 import { PolicyPack, typedRule } from "@pulumi/policy";
 import * as assert from "assert";
 
-new PolicyPack("policy-pack-typescript", {
+new PolicyPack("aws-typescript", {
     policies: [{
         name: "s3-no-public-read",
         description: "Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.",
