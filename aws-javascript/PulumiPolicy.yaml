@@ -1,3 +1,2 @@
-name: aws-javascript
-description: A minimal AWS Policy Pack using JavaScript.
+description: A minimal Policy Pack for AWS using JavaScript.
 runtime: nodejs
