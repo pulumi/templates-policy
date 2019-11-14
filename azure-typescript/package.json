@@ -1,0 +1,12 @@
+{
+    "name": "azure-typescript",
+    "version": "0.0.1",
+    "dependencies": {
+        "@pulumi/azure": "^1.0.0",
+        "@pulumi/pulumi": "^1.0.0",
+        "@pulumi/policy": "latest"
+    },
+    "devDependencies": {
+        "@types/node": "^8.0.0"
+    }
+}
