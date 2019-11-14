@@ -10,7 +10,7 @@ new policy.PolicyPack("azure-typescript", {
         validateResource: policy.validateTypedResource(azure.storage.Container, (container, args, reportViolation) => {
             if (container.containerAccessType === "blob" || container.containerAccessType === "container") {
                 reportViolation(
-                    "You cannot set blob or container access on an Azure Storage Container. " +
+                    "Azure Storage Container must not have blob or container access set. " +
                     "Read more about read access here: " +
                     "https://docs.microsoft.com/en-us/azure/storage/blobs/storage-manage-access-to-resources");
             }
