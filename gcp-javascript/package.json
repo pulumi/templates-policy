@@ -1,0 +1,9 @@
+{
+    "name": "gcp-javascript",
+    "version": "0.0.1",
+    "dependencies": {
+        "@pulumi/gcp": "^1.0.0",
+        "@pulumi/pulumi": "^1.0.0",
+        "@pulumi/policy": "latest"
+    }
+}
