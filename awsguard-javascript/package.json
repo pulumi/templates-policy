@@ -1,0 +1,10 @@
+{
+    "name": "awsguard-javascript",
+    "version": "0.0.1",
+    "dependencies": {
+        "@pulumi/awsguard": "latest"
+    },
+    "devDependencies": {
+        "@types/node": "^8.0.0"
+    }
+}
