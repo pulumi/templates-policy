@@ -1,12 +1,12 @@
 import * as aws from "@pulumi/aws";
-import { PolicyPack, validateTypedResource } from "@pulumi/policy";
+import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
 
 new PolicyPack("aws-typescript", {
     policies: [{
         name: "s3-no-public-read",
         description: "Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.",
         enforcementLevel: "mandatory",
-        validateResource: validateTypedResource(aws.s3.Bucket, (bucket, args, reportViolation) => {
+        validateResource: validateResourceOfType(aws.s3.Bucket, (bucket, args, reportViolation) => {
             if (bucket.acl === "public-read" || bucket.acl === "public-read-write") {
                 reportViolation(
                     "You cannot set public-read or public-read-write on an S3 bucket. " +
