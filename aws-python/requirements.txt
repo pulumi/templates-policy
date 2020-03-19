@@ -1,0 +1,2 @@
+pulumi-policy>=0.4.1.dev1584625475
+pulumi-aws>=1.0.0
