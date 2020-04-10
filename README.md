@@ -2,9 +2,7 @@
 
 This repo contains the templates for `pulumi policy new`, which make it easy to quickly get started building new Pulumi projects.
 
-Status: Beta release.
-
-For more on Policy visit the [Pulumi-Policy repo](https://github.com/pulumi/pulumi-policy).
+For more on Policy visit the [Pulumi Policy SDK repo](https://github.com/pulumi/pulumi-policy).
 
 ## Adding a New Template
 
