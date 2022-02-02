@@ -7,9 +7,9 @@ from pulumi_policy import (
 )
 
 def storage_container_no_public_read_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
-    if args.resource_type == "azure-native:storage:BlobContainer" and "publicAccess" in args.props:
-        access_type = args.props["publicAccess"]
-        if access_type == "Blob" or access_type == "Container":
+    if args.resource_type == "azure:storage/container:Container" and "containerAccessType" in args.props:
+        access_type = args.props["containerAccessType"]
+        if access_type == "blob" or access_type == "container":
             report_violation(
                 "Azure Storage Container must not have blob or container access set. " +
                 "Read more about read access here: " +

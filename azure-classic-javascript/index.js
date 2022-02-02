@@ -1,5 +1,5 @@
 "use strict";
-const azure = require("@pulumi/azure-native");
+const azure = require("@pulumi/azure");
 const policy = require("@pulumi/policy");
 
 new policy.PolicyPack("azure-typescript", {
@@ -7,8 +7,8 @@ new policy.PolicyPack("azure-typescript", {
         name: "storage-container-no-public-read",
         description: "Prohibits setting the public permission on Azure Storage Blob Containers.",
         enforcementLevel: "mandatory",
-        validateResource: policy.validateResourceOfType(azure.storage.BlobContainer, (container, args, reportViolation) => {
-            if (container.publicAccess === "Blob" || container.publicAccess === "Container") {
+        validateResource: policy.validateResourceOfType(azure.storage.Container, (container, args, reportViolation) => {
+            if (container.containerAccessType === "blob" || container.containerAccessType === "container") {
                 reportViolation(
                     "Azure Storage Container must not have blob or container access set. " +
                     "Read more about read access here: " +
