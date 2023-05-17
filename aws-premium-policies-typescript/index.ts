@@ -2,7 +2,7 @@ import { PolicyPack } from "@pulumi/policy";
 import { policyManager } from "@pulumi-premium-policies/policy-manager";
 
 /**
- * To use Pulumi Premium Policies (beta), please look into the READMe.md for more information.
+ * To use Pulumi Premium Policies (beta), please look into the README.md for more information.
  */
 
 new PolicyPack("aws-premium-policies-typescript", {
