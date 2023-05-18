@@ -1,6 +1,6 @@
 {
     "name": "aws-premium-policies-typescript",
-    "version": "0.0.7",
+    "version": "0.0.1",
     "files": [
         ".npmrc",
         "index.ts",
@@ -9,8 +9,8 @@
         "tsconfig.json"
     ],
     "dependencies": {
-        "@pulumi-premium-policies/aws-policies": "<1.0.0",
-        "@pulumi-premium-policies/policy-manager": "<1.0.0",
+        "@pulumi-premium-policies/aws-policies": "^0.0.8",
+        "@pulumi-premium-policies/policy-manager": "^0.0.3",
         "@pulumi/policy": "^1.5.0",
         "@pulumi/pulumi": "^3.0.0"
     },
