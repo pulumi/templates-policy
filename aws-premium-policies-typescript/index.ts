@@ -11,7 +11,7 @@ new PolicyPack("aws-premium-policies-typescript", {
         ...policyManager.selectPolicies({
             // vendors: ["aws"],
             // services: ["ec2", "s3", "apigateway"],
-            // severities: ["medium", "high"],
+            // severities: ["medium", "high", "critical"],
             // topics: ["encryption"],
             // frameworks: ["pcidss"]
         }, "mandatory" ),
