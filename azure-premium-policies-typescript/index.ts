@@ -6,7 +6,7 @@ import { policyManager } from "@pulumi-premium-policies/policy-manager";
  * To use Pulumi Premium Policies (beta),
  * please read the README.md file for more information.
  */
-new PolicyPack("aws-premium-policies-typescript", {
+new PolicyPack("azure-premium-policies-typescript", {
     policies:[
         ...policyManager.selectPolicies({
             // vendors: ["azure"],
@@ -14,7 +14,7 @@ new PolicyPack("aws-premium-policies-typescript", {
             // severities: ["medium", "high", "critical"],
             // topics: ["encryption"],
             // frameworks: ["pcidss"]
-        }, "mandatory" ),
+        }, "mandatory"),
     ],
 });
 

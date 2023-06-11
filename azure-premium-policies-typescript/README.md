@@ -26,7 +26,7 @@ The example below show how to select policies for Azure that are related to the 
 import { PolicyPack } from "@pulumi/policy";
 import { policyManager } from "@pulumi-premium-policies/policy-manager";
 
-new PolicyPack("aws-ts-pac-filter", {
+new PolicyPack("azure-premium-policies-typescript", {
     policies:[
         ...policyManager.selectPolicies({
             vendors: ["azure"],
@@ -61,7 +61,7 @@ import { PolicyPack } from "@pulumi/policy";
 import { policyManager } from "@pulumi-premium-policies/policy-manager";
 import * as azurePolicies from "@pulumi-premium-policies/azure-policies";
 
-new PolicyPack("aws-ts-pac-filter", {
+new PolicyPack("azure-premium-policies-typescript", {
     policies:[
         azurePolicies.azure.compute.LinuxVirtualMachine.disallowPasswordAuthentication,
         azurePolicies.azure.containerservice.KubernetesCluster.configureNetworkPolicy,
