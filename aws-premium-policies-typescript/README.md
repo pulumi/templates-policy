@@ -20,18 +20,19 @@ Pulumi Premium Policies come with a Policy Manager to help you quickly build pol
 
 Policies are selected using any of the 5 metadata fields. See below for more information.
 
-The example below show how to select policies for AWS that are related to the EC2 and S3 service, for which the policy severity is rated either medium or high, and where the policies are related to the PCI-DSS framework.
+The example below show how to select policies for AWS that are related to the EC2 and S3 service, for which the policy severity is rated either medium, high or critical, and where the policies are related to encryption and the PCI-DSS framework.
 
 ```ts
 import { PolicyPack } from "@pulumi/policy";
 import { policyManager } from "@pulumi-premium-policies/policy-manager";
 
-new PolicyPack("aws-ts-pac-filter", {
+new PolicyPack("aws-premium-policies-typescript", {
     policies:[
         ...policyManager.selectPolicies({
             vendors: ["aws"],
             services: ["ec2", "s3"],
-            severities: ["medium", "high"],
+            severities: ["medium", "high", "critical"],
+            topics: ["encryption"],
             frameworks: ["pcidss"],
         }, "mandatory" ),
     ],
@@ -60,7 +61,7 @@ import { PolicyPack } from "@pulumi/policy";
 import { policyManager } from "@pulumi-premium-policies/policy-manager";
 import * as awsPolicies from "@pulumi-premium-policies/aws-policies";
 
-new PolicyPack("aws-ts-pac-filter", {
+new PolicyPack("aws-premium-policies-typescript", {
     policies:[
         awsPolicies.aws.alb.LoadBalancer.enableAccessLogging,
         awsPolicies.aws.alb.LoadBalancer.configureAccessLogging,
