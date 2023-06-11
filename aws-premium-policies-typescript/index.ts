@@ -14,7 +14,7 @@ new PolicyPack("aws-premium-policies-typescript", {
             // severities: ["medium", "high", "critical"],
             // topics: ["encryption"],
             // frameworks: ["pcidss"]
-        }, "mandatory" ),
+        }, "mandatory"),
     ],
 });
 
