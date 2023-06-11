@@ -20,20 +20,20 @@ Pulumi Premium Policies come with a Policy Manager to help you quickly build pol
 
 Policies are selected using any of the 5 metadata fields. See below for more information.
 
-The example below show how to select policies for AWS that are related to the EC2 and S3 service, for which the policy severity is rated either medium, high or critical, and where the policies are related to encryption and the PCI-DSS framework.
+The example below show how to select policies for Azure that are related to the Compute, Container Service and Storage service, for which the policy severity is rated either medium, high or critical, and where the policies are related to encryption and to the PCI-DSS framework.
 
 ```ts
 import { PolicyPack } from "@pulumi/policy";
 import { policyManager } from "@pulumi-premium-policies/policy-manager";
 
-new PolicyPack("aws-premium-policies-typescript", {
+new PolicyPack("aws-ts-pac-filter", {
     policies:[
         ...policyManager.selectPolicies({
-            vendors: ["aws"],
-            services: ["ec2", "s3"],
+            vendors: ["azure"],
+            services: ["compute", "containerservice", "storage"],
             severities: ["medium", "high", "critical"],
             topics: ["encryption"],
-            frameworks: ["pcidss"],
+            frameworks: ["pcidss"]
         }, "mandatory" ),
     ],
 });
@@ -54,21 +54,20 @@ To assist in policy selection visbility, Policy Manager has the ability to displ
 
 Pulumi Premium Policies also allow you to create fine-tuned policy packs by individually selecting policies.
 
-The policies are structures in the same way the provider resources are structured.
+The policies are structures in the same way the provider services and resources are structured.
 
 ```ts
 import { PolicyPack } from "@pulumi/policy";
 import { policyManager } from "@pulumi-premium-policies/policy-manager";
-import * as awsPolicies from "@pulumi-premium-policies/aws-policies";
+import * as azurePolicies from "@pulumi-premium-policies/azure-policies";
 
-new PolicyPack("aws-premium-policies-typescript", {
+new PolicyPack("aws-ts-pac-filter", {
     policies:[
-        awsPolicies.aws.alb.LoadBalancer.enableAccessLogging,
-        awsPolicies.aws.alb.LoadBalancer.configureAccessLogging,
-        policyManager.setPolicyEnforcementLevel(awsPolicies.awsnative.ec2.Volume.disallowUnencryptedVolume, "mandatory"),
+        azurePolicies.azure.compute.LinuxVirtualMachine.disallowPasswordAuthentication,
+        azurePolicies.azure.containerservice.KubernetesCluster.configureNetworkPolicy,
+        policyManager.setPolicyEnforcementLevel(azurePolicies.azurenative.storage.v20150501preview.StorageAccount.disallowPreviewResource, "mandatory"),
     ],
 });
-
 ```
 
 ✅ To allow policy cherry-picking and unlike policy selection described above, you need to import the policy package in your policy pack.

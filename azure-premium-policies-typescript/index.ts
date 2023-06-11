@@ -9,8 +9,8 @@ import { policyManager } from "@pulumi-premium-policies/policy-manager";
 new PolicyPack("aws-premium-policies-typescript", {
     policies:[
         ...policyManager.selectPolicies({
-            // vendors: ["aws"],
-            // services: ["ec2", "s3", "apigateway"],
+            // vendors: ["azure"],
+            // services: ["compute", "containerservice", "storage"],
             // severities: ["medium", "high", "critical"],
             // topics: ["encryption"],
             // frameworks: ["pcidss"]
