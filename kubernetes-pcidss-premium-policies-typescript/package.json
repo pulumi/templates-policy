@@ -8,8 +8,8 @@
         "tsconfig.json"
     ],
     "dependencies": {
-        "@pulumi-premium-policies/kubernetes-policies": "^0",
-        "@pulumi-premium-policies/policy-manager": "^0",
+        "@pulumi/kubernetes-policies": "^0",
+        "@pulumi/policy-manager": "^0",
         "@pulumi/policy": "^1.7.0",
         "@pulumi/pulumi": "^3.0.0"
     },
