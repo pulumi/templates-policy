@@ -1,0 +1,19 @@
+{
+    "name": "aws-cis-compliance-ready-policies-typescript",
+    "version": "0.0.1",
+    "files": [
+        "index.ts",
+        "package.json",
+        "PulumiPolicy.yaml",
+        "tsconfig.json"
+    ],
+    "dependencies": {
+        "@pulumi/aws-compliance-policies": "^0",
+        "@pulumi/compliance-policy-manager": "^0",
+        "@pulumi/policy": "^1.7.0",
+        "@pulumi/pulumi": "^3.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0"
+    }
+}

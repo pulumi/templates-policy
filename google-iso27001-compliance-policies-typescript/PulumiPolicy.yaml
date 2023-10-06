@@ -1,0 +1,2 @@
+description: A minimal Policy Pack for Google using Pulumi Compliance Ready Policies and TypeScript.
+runtime: nodejs
