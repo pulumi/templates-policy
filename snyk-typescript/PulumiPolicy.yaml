@@ -1,0 +1,2 @@
+runtime: nodejs
+description: Policy pack for scanning docker.Image resources using Snyk.
