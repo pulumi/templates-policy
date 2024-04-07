@@ -71,7 +71,7 @@ new PolicyPack("snyk-container-scanning", {
         configSchema: {
             properties: {
                 "dockerfileScanning": {
-                    default: true,
+                    default: false,
                     type: "boolean",
                 },
                 "excludeBaseImageVulns": {
