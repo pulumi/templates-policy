@@ -8,7 +8,7 @@ new PolicyPack("aws-cis-compliance-ready-policies-typescript", {
             // services: ["alb", "apigateway", "apigatewayv2", "appflow", "athena", "cloudfront", "ebs", "ec2", "ecr", "efs", "eks", "elb", "iam", "kms", "lambda", "rds", "s3", "secretsmanager"],
             // severities: ["critical", "high", "low", "medium"],
             // topics: ["availability", "backup", "container", "cost", "documentation", "encryption", "kubernetes", "logging", "network", "performance", "permissions", "resilience", "security", "storage", "vulnerability"],
-            frameworks: ["cis"] // Other available frameworks: cis", "iso27001", "pcidss
+            frameworks: ["cis"] // Other available frameworks: cis", "hitrust", "iso27001", "pcidss
         }, "advisory"),
     ],
 });

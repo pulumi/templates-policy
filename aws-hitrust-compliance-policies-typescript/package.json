@@ -1,5 +1,5 @@
 {
-    "name": "aws-pcidss-compliance-ready-policies-typescript",
+    "name": "aws-hitrust-compliance-ready-policies-typescript",
     "version": "0.0.1",
     "files": [
         "index.ts",

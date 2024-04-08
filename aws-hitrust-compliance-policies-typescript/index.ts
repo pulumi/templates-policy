@@ -1,14 +1,14 @@
 import { PolicyPack } from "@pulumi/policy";
 import { policyManager } from "@pulumi/compliance-policy-manager";
 
-new PolicyPack("aws-pcidss-compliance-ready-policies-typescript", {
+new PolicyPack("aws-hitrust-compliance-ready-policies-typescript", {
     policies:[
         ...policyManager.selectPolicies({
             vendors: ["aws"],
             // services: ["alb", "apigateway", "apigatewayv2", "appflow", "athena", "cloudfront", "ebs", "ec2", "ecr", "efs", "eks", "elb", "iam", "kms", "lambda", "rds", "s3", "secretsmanager"],
             // severities: ["critical", "high", "low", "medium"],
             // topics: ["availability", "backup", "container", "cost", "documentation", "encryption", "kubernetes", "logging", "network", "performance", "permissions", "resilience", "security", "storage", "vulnerability"],
-            frameworks: ["pcidss"] // Other available frameworks: cis", "hitrust", "iso27001", "pcidss
+            frameworks: ["hitrust"] // Other available frameworks: cis", "hitrust", "iso27001", "pcidss
         }, "advisory"),
     ],
 });
