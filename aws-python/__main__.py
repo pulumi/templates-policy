@@ -17,12 +17,12 @@ def s3_no_public_read_validator(args: ResourceValidationArgs, report_violation: 
 s3_no_public_read = ResourceValidationPolicy(
     name="s3-no-public-read",
     description="Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.",
+    enforcement_level=EnforcementLevel.MANDATORY,
     validate=s3_no_public_read_validator,
 )
 
 PolicyPack(
     name="aws-python",
-    enforcement_level=EnforcementLevel.MANDATORY,
     policies=[
         s3_no_public_read,
     ],
