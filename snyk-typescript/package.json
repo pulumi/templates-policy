@@ -7,7 +7,7 @@
     },
     "dependencies": {
         "@pulumi/docker": "^4.5.1",
-        "@pulumi/policy": "^1.10.0",
+        "@pulumi/policy": "^1.20.0",
         "@pulumi/pulumi": "^3.0.0",
         "await-spawn": "^4.0.2"
     }
