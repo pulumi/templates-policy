@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "main": "index.ts",
     "devDependencies": {
-        "@types/node": "18.19.130"
+        "@types/node": "24.12.4"
     },
     "dependencies": {
         "@pulumi/docker": "^5.0.0",
