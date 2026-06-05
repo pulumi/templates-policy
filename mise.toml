@@ -1,0 +1,9 @@
+[tools]
+nodejs = "26.3.0"
+python = "3.14"
+opa = "0.68.0"
+pipx = "1.14.0"
+
+[tasks.verify-policy]
+description = "Run policy template verification"
+run = "./scripts/verify-policy.sh"
