@@ -1,2 +1,2 @@
 pulumi-policy>=1.20.0,<2.0.0
-pulumi-gcp>=9.25.0,<9.26.0
+pulumi-gcp>=9.26.0,<9.27.0
