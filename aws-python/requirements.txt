@@ -1,2 +1,2 @@
 pulumi-policy>=1.20.0,<2.0.0
-pulumi-aws>=7.41.0,<7.42.0
+pulumi-aws>=7.42.0,<7.43.0
